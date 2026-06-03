@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "网页图片批量保存器",
+  "version": "2.0",
+  "description": "一键抓取网页图片，弹出一次窗口选择文件夹并批量保存",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

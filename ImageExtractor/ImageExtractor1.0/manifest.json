@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "一键图片提取器",
+  "version": "1.0",
+  "description": "提取当前网页所有的 img 标签图片链接",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

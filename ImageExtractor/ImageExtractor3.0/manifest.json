@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "网页图片批量保存器 (固定面板版)",
+  "version": "3.1",
+  "description": "通用版抓取：点击图标弹出固定面板，一键抓取（含懒加载）图片并批量保存。",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "打开/关闭图片抓取面板"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["ui.js"],
+      "css": ["ui.css"]
+    }
+  ]
+}

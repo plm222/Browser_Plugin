@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>图片抓取器</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="header">
+        <button id="extract-btn">抓取图片</button>
+        <button id="select-all-btn" class="action-btn" style="display: none;">全选</button>
+        <button id="invert-btn" class="action-btn" style="display: none;">反选</button>
+        
+        <button id="download-btn" class="action-btn" style="display: none; background-color: #28a745;">下载已选</button>
+        <span id="status"></span>
+    </div>
+    
+    <div id="result-container">
+        </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

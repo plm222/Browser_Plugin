@@ -1,0 +1,97 @@
+body {
+    width: 480px; /* 稍微加宽一点，容纳更多按钮 */
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 12px;
+    background-color: #f8f9fa;
+}
+
+.header {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* 按钮间距 */
+    flex-wrap: wrap; /* 按钮多的时候允许换行 */
+}
+
+button {
+    padding: 8px 12px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#extract-btn { background-color: #007bff; }
+#extract-btn:hover { background-color: #0056b3; }
+
+/* 批量操作按钮的样式 */
+.action-btn { background-color: #6c757d; }
+.action-btn:hover { filter: brightness(0.9); }
+#download-btn { background-color: #28a745; }
+
+#status {
+    color: #666;
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: auto; /* 让状态文字靠右 */
+}
+
+#result-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-height: 420px;
+    overflow-y: auto; 
+    padding: 8px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+/* 新增：给每张图片和它的复选框包一层相对定位的容器 */
+.image-wrapper {
+    position: relative;
+    width: 118px;
+    height: 118px;
+    cursor: pointer;
+}
+
+.preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid transparent; /* 默认边框透明 */
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+
+/* 选中状态的图片加上蓝色边框，微微缩小 */
+.image-wrapper.selected .preview-image {
+    border-color: #007bff;
+    transform: scale(0.95);
+}
+
+/* 复选框样式，定位在左上角 */
+.image-checkbox {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 10;
+    /* 让复选框本身不响应点击，点击事件交给外层的 wrapper 处理 */
+    pointer-events: none; 
+}
+
+.empty-msg {
+    color: #adb5bd;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    padding: 40px 0;
+}
