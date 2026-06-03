@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>指纹透视镜</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="header">
+        <h2>👁️ 浏览器追踪透视镜</h2>
+    </div>
+    
+    <details open class="section-container global-section">
+        <summary class="section-title">🌍 全局网络与硬件指纹</summary>
+        <div id="global-fp-list" class="section-content"></div>
+    </details>
+
+    <details open class="section-container headers-section">
+        <summary class="section-title">📨 真实 HTTP 请求头 (Headers)</summary>
+        <p class="section-desc">这是你每次打开网页时，浏览器向服务器发送的第一张“名片”。</p>
+        <div id="http-headers-list" class="section-content"></div>
+    </details>
+
+    <details open class="section-container page-section">
+        <summary class="section-title">📍 当前页面专属缓存 (Local)</summary>
+        <div id="page-domain-info" class="domain-highlight">等待获取域名...</div>
+        <div id="page-fp-list" class="section-content"></div>
+    </details>
+
+    <script src="popup.js"></script>
+</body>
+</html>
